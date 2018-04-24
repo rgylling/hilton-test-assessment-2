@@ -1,3 +1,4 @@
+# Hilton Assessment
 ## Installation
 Clone this repository, navigate to the folder, run `npm install` to install the necessary packages, then run `npm start` to start your server.
 
