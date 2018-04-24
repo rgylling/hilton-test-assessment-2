@@ -1,9 +1,9 @@
+import React from 'react';
+
 import { Label } from '../Label'
 import { Select } from '../Select'
 import { Option } from '../Option'
 import { FlexGrow } from '../FlexGrow'
-
-import React from 'react';
 
 
 const DropDownSelect = ({label, options, isDisabled, value, callBack}) => (
