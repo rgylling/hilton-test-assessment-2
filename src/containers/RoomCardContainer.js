@@ -85,7 +85,6 @@ class RoomCardContainer extends Component {
 
         // Set State with newly update Obj
         this.setState({rooms: roomsObj});
-
     }
 
     toggleCheckbox(e, room) {
@@ -95,8 +94,10 @@ class RoomCardContainer extends Component {
         // Get Index of room that was selected
         let roomIndex = rooms.findIndex((element) => element.label === newObj.label);
 
+        // Toggle isChecked key of the room obj
         newObj.isChecked = e.target.checked;
 
+        // Toggle checked state
         if(newObj.isChecked){
             this.toggleCheckedState(1, roomIndex + 1, newObj.isChecked, rooms);
         } else {
@@ -116,14 +117,14 @@ class RoomCardContainer extends Component {
 
                 // Find which dropdown was toggled and set the state obj
                 if ( person === 'adult') {
-                    filteredRoom.adults = parseInt(val, 10)
+                    filteredRoom.adults = parseInt(val, 10);
                 }
                 if ( person === 'children') {
-                    filteredRoom.children = parseInt(val, 10)
+                    filteredRoom.children = parseInt(val, 10);
                 }
 
-                // set state for specific room
-                this.setState({rooms:[...this.state.rooms,...filteredRoom]})
+                // Set state for specific room
+                this.setState({rooms:[...this.state.rooms,...filteredRoom]});
 
             }
 
@@ -133,12 +134,12 @@ class RoomCardContainer extends Component {
     }
 
     saveRooms() {
-        // Sets local copy of state so users data will be saved on refresh
+        // Sets local copy of state so users data will be saved
         setStorage('rooms', this.state.rooms);
     }
 
     render() {
-        const rooms    = this.state.rooms
+        const rooms    = this.state.rooms;
         const adult    = dropDownOptions.adult;
         const children = dropDownOptions.children;
 

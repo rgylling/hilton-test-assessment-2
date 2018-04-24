@@ -20,6 +20,4 @@ const DropDownSelect = ({label, options, isDisabled, value, callBack}) => (
     </FlexGrow>
 )
 
-
-
 export default DropDownSelect;
